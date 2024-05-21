@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500&display=swap');
+ 
+ 
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+
+ body {
+    height: 100vh;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    display: grid;
+    grid-template-rows: 80px 1fr;
+    grid-template-columns: 300px 1fr;
+    grid-template-areas: 
+    "header header "
+    "sidebar main ";
+ }
+
+ a {
+   
+   text-decoration: none;
+   color: black;
+ }
+
+ .header {
+    background-color: rgb(160, 202, 211); 
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-area: header;
+ }
+
+ .sidebar {
+    background-color: rgb(204, 206, 205);
+    grid-row-start: 1;
+    grid-area: sidebar;
+    grid-row-end: 3;
+ }
+
+ .main {
+    background-color: white;
+    grid-area: main;
+    display: grid ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 1fr 1fr;
+    gap: 30px;
+    margin: 2%;
+    grid-template-areas: 
+    "c1 c2 c3 "
+    "c4 c4 c5 "
+    "c4 c4 c6";
+ }
+
+ .card {
+    position: relative;
+    background-color: rgb(228, 225, 225);
+    border-radius: .4rem;
+ }
+
+ .card:nth-child(1) {
+    grid-area: c1;
+ }
+
+ .card:nth-child(2) {
+    grid-area: c2;
+ }
+
+ .card:nth-child(3) {
+    grid-area: c3;
+ }
+
+ .card:nth-child(4) {
+    grid-area: c4;
+ }
+
+ .card:nth-child(5) {
+    grid-area: c5;
+ }
+
+ .card:nth-child(6) {
+    grid-area: c6;
+ }
+
+
+ /* Header CSS */
+
+  .header {
+   position: relative;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   align-content: center;
+  }
+
+  .header ul li .profile-pic {
+   position: relative;
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   border: 1px solid black;
+   /* background-color: aqua; */
+  }
+
+  #profile-container {  
+   position: absolute;
+   width: 30vh;
+   height: 32.3vh;
+   right: 2rem;
+   top: 3rem;
+   border-radius: 3%;
+   background-color: rgb(255, 255, 255);
+   padding: 1.2rem;
+   list-style: none;
+   text-align: center;
+   font-weight: 600;
+   font-size: 2vh;
+   font-family: "Poppins", sans-serif;
+   z-index: 99;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   display: none;
+  }
+
+  .nav-links {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+
+  .nav-links li {
+   position: relative;
+  }
+
+  .fa-angle-down {
+   cursor: pointer;
+  }
+
+  .fa-circle-xmark {
+   position: relative;
+   top: -4%;
+   left: 50%;
+   font-size: 1.3rem;
+   cursor: pointer;
+  }
+
+  .fa-circle-xmark:hover {
+   color: red;
+  }
+
+  #profile-container ul {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+  }
+
+  #profile-container ul a {
+   position: relative;
+   text-align: center;
+   left: 5.7em;
+  }
+
+  #profile-container ul li {
+   position: relative;
+   width: 14.6rem;
+   /* padding: 30%; */
+   margin: 10% 0;
+  }
+
+  #profile-container ul a:hover {
+   background-color: rgba(108, 133, 138, 0.152);
+   color: rgb(66, 139, 156);
+  }
+
+  .profile-pic {
+   cursor: pointer;
+  }
+  
+  .fa-angle-down {
+   position: relative;
+   right: 6%;
+  }
+
+  .fa-angle-down:hover {
+   color: rgb(88, 207, 243);
+  }
+
+  .header ul {
+   position: relative;
+   width: 10%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-right: 2%;
+  }
+
+  .header ul li {
+   position: relative;
+   font-family: "Poppins", sans-serif;
+  }
+
+
+  #logout {
+   position: relative;
+   margin-left: 16%;
+   width: 9em;
+  }
+
+  #logout:hover {
+   color: red;
+  }
+
+
+
+
+  /* #logout {
+   position: relative;
+   margin-left: 3%;
+   width: 20%;
+  } */
+
+ /* Hearder ends */
+
+
+
+ /* Sidebar CSS */
+
+ .sidebar {
+   background-color: rgb(237, 255, 255);
+ }
+
+ .menu-header {
+   position: relative;
+   display: flex;
+   /* margin: 1%; */
+   justify-content: space-between;
+   align-items: center;
+ }
+
+ .menu-header h2 {
+   position: relative;
+   top: 3rem;
+   left: 35%;
+   font-size: 2rem;
+   color: rgb(62, 83, 101);
+ }
+
+ .menu-header span {
+   font-size: 1rem;
+   cursor: pointer;
+ }
+
+ .sidebar-links {
+   position: relative;
+   margin-top: 32%;
+ }
+
+  /* ul li {
+   position: relative;
+   padding: .9rem;
+   list-style: none;
+   width: 100%;
+   text-align: center;
+   text-transform: uppercase;
+   font-weight: 600;
+   font-size: 2vh;
+   font-family: "Poppins", sans-serif;
+   margin: .4rem;
+ } */
+
+ /* ul:hover {
+   width: 100%;
+   color: white;
+ }
+
+ ul a li:hover{
+   background-color: rgb(108, 133, 138);
+ } */
+
+
+  ul li {
+   list-style: none;
+ }
+
+
+ .sidebar-links ul a {
+   position: relative;
+   padding: 1.2rem;
+   list-style: none;
+   width: 100%;
+   text-align: center;
+   text-transform: uppercase;
+   font-weight: 600;
+   font-size: 2vh;
+   font-family: "Poppins", sans-serif;
+   margin: .4rem;
+ }
+
+  .sidebar-links ul a:hover {
+   /* background-color: rgb(108, 133, 138); */
+   background-color: rgb(160, 202, 211);
+   color: white;
+ }
+
+
+ .sidebar-links ul {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .sidebar {
+   position: relative;
+   /* transition: .5s all ease-in; */
+ }
+
+
+ /* Siderbar ends */
+
+
+
+
+
+
+ /* MAIN CSS ---------------------------------------------- */
+
+
+
+ .main .day-month {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   font-family: "Poppins", sans-serif;
+   background-color: rgb(2, 79, 100);
+   color: rgb(234, 222, 160);
+   text-transform: uppercase;
+ }
+
+
+
+
+ .main .day-month .first-section {
+   position: relative;
+   top: 20%;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   font-size: 1.3rem;
+   /* color: rgb(83, 205, 195); */
+   color: white;
+ }
+
+ .main .first-section #monthOfYear {
+   position: relative;
+   /* background-color: rgb(83, 205, 195); */
+   /* color: white; */
+   border-radius: 5%;
+   /* width: 7vh;
+   height: 7vh; */
+   text-align: center;
+   padding: 1%;
+ }
+
+ .main .day-month #time {
+   position: relative;
+   text-align: center;
+   top: 50%;
+   font-size: 1.3rem;
+   /* color: rgb(61, 161, 198); */
+ }
+
+ /* .day-month {
+   background-color: #f0f0f0;
+   border: 1px solid #ccc;
+   padding: 10px;
+   margin: 10px;
+ } */
+
+
+
+ .faculty-attendance {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+ }
+
+ .faculty-attendance h3 {
+   font-size: 2rem;
+   text-transform: uppercase;
+   background: linear-gradient( to right, #2a9aa2 ,#5bd3cb );
+   background-clip: text;
+   -webkit-text-fill-color: transparent 
+ }
+
+ .faculty-attendance .attend-btn {
+   position: relative;
+ }
+
+ .faculty-attendance .attend-btn button {
+   position: relative;
+   background-color:  white;
+   font-size: 1.2rem;
+   border: none;
+   border-radius: 1.8rem;
+   padding: 23%;
+   text-align: center;
+   font-weight: 700;
+   color: black;
+   left: -33%;
+   cursor: pointer;
+   letter-spacing: 1%;
+   top: -23%;
+ }
+
+ .faculty-attendance  #confirmation {
+   position: relative;
+   /* background-color: rgb(116, 173, 187); */
+   background-color: rgb(192, 216, 221);
+   padding: 3%;
+   color: green;
+   z-index: 888;
+   border: none;
+   border-radius: 3%;
+   left: 120%;
+   top: -40%;
+   opacity: 0;
+   transition: 2s;
+ }
+
+
+
+ ul {list-style-type: none;}
+
+
+ .month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #1abc9c;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
+
+
+
+ /* MAIN CSS END------------------------------------------ */
+
+ @media (max-width:1280px) {
+    .main {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6 ,300px);
+        grid-template-areas: initial;
+    }
+
+    .card {
+        grid-area: initial !important;
+    }
+
+    .sidebar {
+       visibility: hidden;
+    }
+
+    .main {
+      position: absolute;
+      top: 20vh;
+      width: 80vw;
+      left: 10%;
+      height: auto;
+      /* left: -30%; */
+    }
+ }
+
+
+ @media (max-width:730px) {
+   
+
+   .nav-links li {
+      position: relative;
+      transform: translate(-45%,0%);
+   }
+
+
+   /* #profile-container {
+      background-color: rgb(192, 192, 192);
+   } */
+
+   #profile-container ul a:hover {
+      background-color: initial;
+   }
+ }
+
+
+
+ /* media query for header */
+
+
+ @media (max-width:1400px){
+   
+      .header{
+         position: relative;
+         width: 100%;
+         /* display: flex;
+         justify-content: space-around; */
+      }
+
+      .nav-links  li{
+         position: relative;
+         left: -45%;
+      }
+
+      /* #profile-container {
+         background-color: rgb(192, 192, 192);
+      } */
+   
+      #profile-container ul a:hover {
+         background-color: initial;
+      }
+
+ }
+
+
+
+
+ /* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+  .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li, .days li {width: 12.2%;}
+}

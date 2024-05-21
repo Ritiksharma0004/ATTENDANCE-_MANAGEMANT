@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500&display=swap');
+ 
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+
+ body {
+   font-family:sans-serif;
+ }
+
+ header {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    /* padding: 2%; */
+    /* background-color: rgb(9, 127, 103); */
+    background-color: rgb(95, 135, 131);
+    display: flex;
+    justify-content: center;
+ }
+
+ 
+ header h1 {
+    font-size: 4rem;
+    color: white;
+    text-transform: uppercase;
+ }
+
+ .institute {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+    color: rgb(141, 156, 117);
+    font-size: 2rem;
+ }
+
+ .institute h1 {
+    background: linear-gradient(to right, #66d4cd, #8ccfd7,#58a0ab, #149f9a);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+ }
+
+ .main-content {
+    position: relative;
+    height: 68vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    /* background-color: aqua; */
+ }
+
+ .main-content .pic {
+    position: relative;
+    margin: 2%;
+    height: 100%;
+    width: 50%;
+    background-image: url(./image/artboard-3-7_20230228181625_0.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2%;
+ }
+
+ .main-content .sign-in {
+    position: relative;
+    margin: 2%;
+    height: 100%;
+    width: 50%;
+    background-color: rgb(180, 202, 205);
+    border-radius: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(148, 144, 16);
+ }
+
+ .main-content .sign-in #form {
+    position: relative;
+    top: -23%;
+ }
+
+ .main-content .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
+
+ .container h1 {
+    position: relative;
+    font-size: 3rem;
+    color: rgb(111, 153, 126);
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    margin-top: 16% ;
+ }
+
+ .container .field {
+    position: relative;
+    top: 6em;
+ }
+ .container .field [type = text]{
+    position: relative;
+    margin-bottom: 6%;
+    height: 3rem;
+    width: 16rem;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    border: 1px solid rgb(108, 208, 25);
+ }
+
+ .container .field [type = password]{
+    position: relative;
+    margin-bottom: 6%;
+    height: 3rem;
+    width: 16rem;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    border: 1px solid rgb(108, 208, 25);
+ }
+
+ input[type="text"]::placeholder {
+    position: relative;
+    left: 2%;
+    font-weight: 500;
+    opacity: .6;
+ }
+
+ input[type="password"]::placeholder {
+    position: relative;
+    left: 2%;
+    font-weight: 500;
+    opacity: .6;
+ }
+
+ input[type="text"]{
+    color: rgb(35, 103, 79);
+    font-weight: 700;
+ }
+
+
+ .field #submit {
+    position: relative;
+    text-align: center;
+    top: 1.7rem;
+    width: 7rem;
+    height: 2.3rem;
+    font-size: 1.2rem;
+    background-color: rgb(215, 219, 132);
+    border: none;
+    left: 4rem;
+    border-radius: 8%;
+    cursor: pointer;
+ }
+
+
+ 
+
+
+ /* responsive */
+
+ @media (max-width:900px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .institute {
+        font-size: 2rem;
+    }
+
+    .main-content {
+        position: relative;
+        height: 200vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .main-content .pic {
+        position: relative;
+        height: 50%;
+        width: 96%;
+        display: none;
+    }
+
+    .main-content .sign-in {
+        position: relative;
+        top: -30%;
+        height: 40%;
+        width: 70%;
+        padding: 10%;
+        background-color: rgb(150, 206, 213);
+    }
+
+ }
+
+
+ @media (max-width:679px) {
+
+    header h1 {
+        text-align: center;
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    .institute {
+        margin: 4%;
+        font-size: 1rem;
+    }
+
+    .main-content .sign-in {
+        position: relative;
+        top: -30%;
+        height: 40%;
+        width: 90%;
+        /* padding: 10%; */
+        background-color: rgb(150, 206, 213);
+    }
+ }
