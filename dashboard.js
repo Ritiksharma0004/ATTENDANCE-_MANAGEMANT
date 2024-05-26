@@ -1,4 +1,5 @@
 // let profile = document.querySelector("#profile-container");
+
 document.querySelector(".profile-pic").addEventListener("click", function () {
   document.querySelector("#profile-container").style.display = "block";
 });
@@ -69,6 +70,7 @@ const today = new Date();
 const dateString = today.getDate();
 const dayOfWeek = today.getDay();
 const Month = today.getMonth();
+const year = today.getFullYear();
 //  const hours = today.getHours()%12;
 //  const minutes = today.getMinutes();
 //  const seconds = today.getSeconds();
@@ -103,9 +105,8 @@ const Ymonth = monthsOfYear[Month];
 
 // Set the text of the h2 element to the formatted date string
 //  h2.textContent = dateString;
-h2.textContent = `${dateString}`;
 
-month.textContent = `${Ymonth}`;
+month.textContent = `${day},${dateString} ${Ymonth} ${year}`;
 
 // week.textContent = `${day}`;
 
@@ -131,12 +132,19 @@ setInterval(display, 1000);
 
 //Faculty attendance btn bg-change code
 
-let button = document.querySelector("#btn");
+let button = document.querySelector(`#btn`);
 
 button.addEventListener("click", function () {
+  let attendanceAlert = document.querySelector("#confirmation h4");
+  let message = document.querySelector(".attend-btn");
+  attendanceAlert.innerText = `Attendance mark on ${dateString} ${Ymonth} :)`;
   const btn = document.querySelector("#confirmation");
   button.style.backgroundColor = "green";
   button.style.color = "white";
+
+  if (button.style.pointerEvent === "none") {
+    attendanceAlert.innerText = `Attendance marked already !`;
+  }
 
   setTimeout(() => {
     btn.style.opacity = 1;
@@ -151,4 +159,26 @@ button.addEventListener("click", function () {
     button.style.opacity = 0.1;
     button.style.cursor = "default";
   }
+
+  // DATE TO BE MARKED GREEN IF PRESENT --------------------------------------------------
+
+  setTimeout(() => {
+    let attenDay = document.getElementById(`${dateString}`);
+    attenDay.style.backgroundColor = "rgb(143, 241, 208)";
+  }, 1500);
 });
+
+// calender js
+
+let holiday = document.querySelector(".c3");
+let span = document.querySelector("#removeAfterClicked");
+
+holiday.addEventListener("click", (e) => {
+  span.innerText = `Holiday on ${dateString}`;
+  span.style.color = "rgb(120, 221, 186)";
+  span.style.fontSize = "1.7rem";
+  holiday.style.pointerEvent = "none";
+  holiday.style.cursor = "default";
+});
+
+//  calender end
